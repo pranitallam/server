@@ -32,5 +32,14 @@ pipeline {
                 }
             }
        }
+        stage('Sonar Scan'){
+		 steps{
+			 dir('springboottest'){
+			 withSonarQubeEnv('sonarqube'){
+		 sh 'mvn sonar:sonar'
+		 }
+	    }
+	 }
+	 }
     }
 }
