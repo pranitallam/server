@@ -34,7 +34,7 @@ pipeline {
        }
         stage('Sonar Scan'){
 		 steps{
-			 dir('springboottest'){
+			 dir('demo'){
 			 withSonarQubeEnv('sonarqube'){
 		 sh 'mvn sonar:sonar'
 		 }
