@@ -32,14 +32,6 @@ pipeline {
                 }
             }
        }
-        stage('Sonar Scan'){
-		 steps{
-			 dir('demo'){
-			 withSonarQubeEnv('sonarqube'){
-		 sh 'mvn sonar:sonar'
-		 }
-	    }
-	 }
-	 }
+        
     }
 }
