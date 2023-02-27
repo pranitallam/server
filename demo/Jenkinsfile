@@ -41,21 +41,7 @@ pipeline {
             }
        }
         
-		
-	stage('compile'){}	    
-			    
-			    
-		        
-		 
-	    
-	 
-	 
-			  
-			    
-		        
-		 
-	    
-	 
+ 
 	
     }
 }
