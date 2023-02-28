@@ -1,20 +1,20 @@
 
 pipeline {
     agent any
-//     tools {
-//         maven "Maven"
+    tools {
+        maven "Maven"
        
-//     }
+    }
     stages {
-//         stage('Initialize'){
-//             steps{
-//                 echo "PATH = ${M2_HOME}/bin:${PATH}"
-//                 echo "M2_HOME = /opt/maven"
-//             }
-//         }
+        stage('Initialize'){
+            steps{
+                echo "PATH = ${M2_HOME}/bin:${PATH}"
+                echo "M2_HOME = /opt/maven"
+            }
+        }
 	stage('Compile') {
             steps {
-                withMaven(maven : 'maven_3_0_5){
+                dir('demo'){
                 sh 'mvn clean compile'
                 }
             }
